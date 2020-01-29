@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>pair-programming</title>
+        <link rel="stylesheet" href="assets/stylesheet/style.css">
+    </head>
+    <body>
+        <main class="container">
+            <heading >
+                <h1 class="heading">Side-By-Side Positioning Demo</h1>
+            </heading class="container">
+            <div class="red-div">These two divs are positioned next to one another using <span class="highlight">display: inline-block</span></div>
+            <div class="red-div">Notice the space between them.
+                    It occurs because of my carriage in return HTML which I have used to keep the code organized.
+                    I have used to reset to insure no elements  should have any default margin or padding.
+                    (I did add a bottom margin to make it easier to read.)
+                    This space is actually a space character rendered just as it would be between two inline elements.
+            </div>
+            <div class="clearfix">
+                <div class="green-div">These two divs are positioned using <span class="highlight">float:left</span></div>
+                <div class="green-div">You can see that , even though the elements are spaced in the code,
+                    the space is not actually rendered on the page.This may not be a huge deal in this first examples..
+                </div>
+            </div>
+            <div class="bottom red-div">
+                What if I want my side-side elements to take up the full width of parent element?
+                I can set the width of each to 50%, right?
+            </div>
+            <div class="bottom red-div">
+                    Wrong!Because,together,the two inline block will add up to 100% of the available width.
+                    but that doesn't account for the space between.
+            </div>
+            <div class="clearfix">
+                <div class="green-div green-div1">If I do the same thing with floated elements...</div>
+                <div class="green-div green-div1">The two elements are Side-By-Side just as I intended and fill the  entire width of parent 
+                    (which, in case,is the same as widthof the viewport.)
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+
+ 
